@@ -1,0 +1,65 @@
+Categorías y productos
+1- SELECT * FROM emarket.categorias;
+2- SELECT CategoriaNombre, Descripcion FROM emarket.categorias;
+3- SELECT * FROM emarket.productos;
+4- SELECT * FROM emarket.productos where Discontinuado=1;
+5- SELECT ProductoNombre FROM emarket.productos where ProveedorID=8;
+6- SELECT * FROM emarket.productos where PrecioUnitario between 10 and 22;
+7- SELECT * FROM emarket.productos where UnidadesStock < NivelReorden; 
+8- SELECT * FROM emarket.productos where (UnidadesStock < NivelReorden) and UnidadesPedidas=0;
+
+Clientes
+1- SELECT * FROM emarket.clientes 
+where Contacto is not null and Compania is not null and Titulo is not null and Pais is not null
+order by Pais;
+2- SELECT * FROM emarket.clientes 
+where Titulo like 'Owner'
+3- SELECT * FROM emarket.clientes 
+where Contacto like 'c%'
+
+Facturas
+1- SELECT * FROM emarket.facturas
+order by FechaFactura;
+2- SELECT * FROM emarket.facturas
+where PaisEnvio = 'USA' and EnvioVia <> 3
+3- SELECT * FROM emarket.facturas
+where ClienteID ='GOURL'
+4- SELECT * FROM emarket.facturas
+where EmpleadoID IN (2, 3, 5, 8, 9)
+
+Productos
+1- SELECT * FROM emarket.productos
+order by PrecioUnitario desc;
+2- SELECT * FROM emarket.productos
+order by PrecioUnitario desc
+ limit 5
+3- SELECT * FROM emarket.productos
+order by UnidadesStock desc
+limit 10
+
+FacturaDetalle
+1- SELECT FacturaID, ProductoID, Cantidad FROM emarket.facturadetalle;
+2- SELECT FacturaID, ProductoID, Cantidad FROM emarket.facturadetalle
+order by Cantidad desc
+3- SELECT * FROM emarket.facturadetalle
+where Cantidad between 50 and 100
+4- SELECT FacturaID as NroFactura, ProductoID as Producto, PrecioUnitario*Cantidad as Total FROM emarket.facturadetalle
+
+
+Extras!
+1- SELECT * FROM emarket.clientes
+where Pais in ('Brazil', 'Mexico') or Titulo like 'Sales%';
+2- SELECT * FROM emarket.clientes
+where Compania like 'A%';
+3- SELECT Ciudad, Contacto as 'Apellido y Nombre', Titulo as 'Puesto' FROM emarket.clientes
+where Ciudad = 'Madrid'
+4- SELECT * FROM emarket.facturas
+where FacturaID between 10000 and 10500;
+5- SELECT * FROM emarket.facturas
+where (FacturaID between 10000 and 10500) or ClienteID like 'B%';
+6- SELECT * FROM emarket.facturas
+where CiudadEnvio = 'Vancouber' or EnvioVia = 3
+7- SELECT EmpleadoID FROM emarket.empleados
+where Apellido='Buchanan';
+8- SELECT * FROM emarket.facturas
+where EmpleadoID = 5
