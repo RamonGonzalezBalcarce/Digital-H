@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* NORMALIZACION Y DEFUALT CONFIG */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    color: #3C2313;
+}
+
+ul {
+    list-style: none;
+
+}
+
+/* DESCUENTOS */
+.descuentos {
+    background: #222222;
+    color: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    padding: 4px 52px 4px 90px;
+
+}
+
+select {
+    color: #fff;
+    background: #222222;
+    outline: none;
+    border: none;
+    font-size: 10px;
+}
+
+/* HEADER */
+header .nav-container {
+    background: #F0A83E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 40px;
+
+}
+
+nav a {
+    color: #f3f3f3;
+    font-size: 13px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+nav ul a:hover {
+    color: #3C2313;
+}
+
+nav ul a::before {
+    color: #f3f3f3;
+    content: "\f1b0 ";
+    font-family: FontAwesome;
+    padding-right: 3px;
+    transition: 0.5s;
+}
+
+nav ul a:hover::before {
+    color: #3C2313;
+}
+
+nav ul {
+    display: flex;
+}
+
+.toggle {
+    display: none;
+}
+
+/* HERO */
+.banner {
+    background-image: url(../img/bowl-and-pet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 409px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.banner div {
+    text-align: center;
+    padding: 12px;
+}
+
+.banner div h2 {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.banner div p {
+    padding: 12px;
+}
+
+.banner div a {
+    background: #F0A83E;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    padding: 15px 23px;
+}
+
+/* SECCION PRODUCTOS */
+.productos {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.productos h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.productos ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    gap: 13px;
+}
+
+.productos li.separador {
+    margin: 20px 0;
+    color: #666666;
+}
+
+.productos a {
+    display: inline-block;
+    padding: 20px 0px;
+    color: #666666;
+    font-size: 15px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    justify-content: center;
+    margin: 33px 22px;
+}
+
+.card {
+    background: #FBFAF6;
+    width: 265px;
+    min-width: 239px;
+}
+
+.card h4 p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card p {
+    color: #F0A83E;
+    padding-bottom: 7px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* SECCION CONTACTO */
+.contacto {
+    text-align: center;
+}
+
+
+form.contact {
+    margin-top: 20px;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-box {
+    width: 340px;
+    height: 40px;
+    padding: 14px;
+    border-radius: 15px;
+    border: 1px solid #d1d1d1;
+    background: #3C2313;
+    color: #fff;
+    outline: none;
+    font-size: 12px;
+}
+
+.input-box::placeholder {
+    color: #fff;
+    font-size: 12px;
+}
+
+.btn-container {
+    margin-top: 31px;
+}
+
+.btn {
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px;
+    width: 110px;
+    cursor: pointer;
+}
+
+#reset {
+    background: #8A8787;
+}
+
+#send {
+    background: #F0A83E;
+}
+
+/* FOOTER */
+.subscribe {
+    background: #F0A83E;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 47px 10px 23px;
+}
+
+.subscribe div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.subscribe .input-box {
+    width: 271px;
+    height: 40px;
+    padding: 14px;
+    border-radius: 15px;
+    border: 1px solid #d1d1d1;
+    background: #FFFFFF;
+    color: #A0A0A0;
+    outline: none;
+    font-size: 12px;
+}
+
+.subscribe .input-box::placeholder {
+    color: #A0A0A0;
+    font-size: 12px;
+}
+
+.subscribe .btn {
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    font-size: 10px;
+    padding: 12px;
+    max-width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#subscribe {
+    background: #3C2313;
+}
+
+.infoAndLogo {
+    background: #3C2313;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 70px 0 70px;
+}
+
+.info-container h3 {
+    color: #fff;
+}
+
+.info-container p {
+    color: #8A8787;
+}
+
+.info {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.derechos {
+    background: #222222;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    padding: 8px 0;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 790px) {
+
+    .subscribe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe>div {
+        margin-bottom: 14px;
+    }
+
+    .subscribe form {
+        display: flex;
+        gap: 6px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 660px) {
+
+    .toggle {
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: 12px;
+    }
+
+    header .nav-container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .navegacion ul {
+        display: none;
+    }
+
+    header nav>a {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .navegacion {
+        flex: 1 1 100%;
+    }
+
+    .navegacion ul.open {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
+
+@media all and (max-width: 620px) {
+    .infoAndLogo {
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        margin-bottom: 23px;
+    }
+
+    .contacto h2 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .btn-container {
+        display: flex;
+        width: 100%;
+        gap: 6px;
+        padding: 0 6px;
+    }
+
+    .btn {
+        flex: 1;
+        height: 45px;
+    }
+}

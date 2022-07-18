@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Hero Cards</title>
+</head>
+
+<body>
+    <header>
+        <div class="descuentos">20% de descuento en todos los productos!</div>
+        <div class="logoContainer">
+            <img src="./img/logo.svg" alt="">
+            <h1>Nombre Tienda</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Registrarme</a></li>
+                <li><a href="">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form-container">
+        <form action="./resultado.html" method="get">
+            <h2>Añadí tu super!</h2>
+            <p>Agregá tu personaje favorito completando las opciones.</p>
+            <div class="row">
+                <div class="col">
+                    <label for="nombre">* Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="date" name="date">
+                    <textarea name="textarea" placeholder="Descripción"></textarea>
+                </div>
+                <div class="col">
+                    <label for="especie">* Especie</label>
+                    <select name="especie" id="especie" required>
+                        <option value="" selected disabled hidden>Especie</option>
+                        <option value="1">Humano</option>
+                        <option value="2">Semi-Dios</option>
+                        <option value="3">Reptil</option>
+                    </select>
+                    <label for="title">Agregar Foto</label>
+                    <input type="file" id="file">
+                    <label for="power"> Poderes
+                        <div class="item">
+                            <input type="checkbox" id="power" name="power" value="Fly">
+                            <label for="power">Volar</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" id="power" name="power" value="Intelligent">
+                            <label for="power">SuperInteligencia</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" id="power" name="power" value="Laser">
+                            <label for="power">Vista de rayo láser</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" id="power" name="power" value="Money">
+                            <label for="power">Billetera gorda</label>
+                        </div>
+                    </label>
+                    <hr>
+                    <label for="hero-type"> Tipos de personaje
+                        <div class="item">
+                            <input type="radio" name="hero-type" id="hero-type" value="Hero">
+                            <label for="hero-type">Héroe / Heroina</label>
+                        </div>
+                        <div class="item">
+                            <input type="radio" name="hero-type" id="hero-type" value="Villan">
+                            <label for="hero-type">Villano / Villana</label>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <button>Añadir</button>
+        </form>
+    </section>
+    <footer>
+        <div class="empty"></div>
+        <p>Todos los derechos reservados a FRONT END 1</p>
+        <div class="github-img"><img src="./img/github.svg" alt="Github"></div>
+    </footer>
+</body>
+
+</html>
